@@ -31,6 +31,7 @@ import traceback
 from threading import *
 from signalProc import *
 import importlib
+import RPi.GPIO as GPIO
 
 # Globals
 GPIO.setwarnings(False)
