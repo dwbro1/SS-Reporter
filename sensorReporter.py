@@ -33,6 +33,7 @@ from signalProc import *
 import importlib
 
 # Globals
+GPIO.setwarnings(False)
 logger = logging.getLogger('sensorReporter')
 
 config = ConfigParser.ConfigParser(allow_no_value=True)
