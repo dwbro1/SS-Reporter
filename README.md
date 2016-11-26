@@ -1,6 +1,3 @@
-#Credits
-Originally cloned from https://github.com/rkoshak/sensorReporter
-
 # sensorReporter
 A Python script that bridges sensors and actuators to MQTT and/or REST. It was
 written to support integrating remote sensors with openHAB, but it should 
