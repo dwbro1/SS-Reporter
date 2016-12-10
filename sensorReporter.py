@@ -31,8 +31,10 @@ import traceback
 from threading import *
 from signalProc import *
 import importlib
+import RPi.GPIO as GPIO
 
 # Globals
+GPIO.setwarnings(False)
 logger = logging.getLogger('sensorReporter')
 
 config = ConfigParser.ConfigParser(allow_no_value=True)
