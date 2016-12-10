@@ -1,3 +1,5 @@
+
+#!/usr/bin/env python
 """
    Copyright 2016 Dale Brown
 
@@ -18,16 +20,16 @@
  Date:   December 9, 2016
  Purpose: Checks envirophat sensors and publishes any changes
 
- TODO: Take advantage of GPIO.add_event_detect(pin, GPIO.RISING, callback=myFunction) 
+ TODO: Take advantage of GPIO.add_event_detect(pin, GPIO.RISING, callback=myFunction)
        to register for events instead of polling. Use Dash sensor as an example.
 """
 
 import sys
+import time
+
 from envirophat import light, weather, leds
 
 class envirophatSensor:
-    """Represents a sensors connected"""
-      
+
     def publishState(self):
-        """Publishes the current state"""
         self.publish('weather.temperature()', self.destination)
