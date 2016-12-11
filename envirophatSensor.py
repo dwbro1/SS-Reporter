@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python
 """
    Copyright 2016 Dale Brown
@@ -27,9 +26,18 @@
 import sys
 import time
 
-from envirophat import light, weather, leds
+from envirophat import weather
 
 class envirophatSensor:
 
+    """Represents a sensors connected"""
+
+    def __init__(self, publisher, params):
+        """Gets data from sensor"""
+
+        self.temp = weather.temperature()
+
     def publishState(self):
+        """Publishes the current state"""
+
         self.publish('weather.temperature()', self.destination)
